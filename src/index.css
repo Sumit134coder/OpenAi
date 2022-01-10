@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap');
 
 @layer components {
   
@@ -13,9 +13,14 @@
   body {
     @apply h-full
   }
+  
+  input::-ms-reveal,
+  input::-ms-clear {
+    display: none;
+  }
 
   .btn { 
-    @apply inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md 
+    @apply inline-flex items-center px-4 py-2 border border-transparent text-base font-normal rounded-md 
     text-white bg-gray-500 hover:bg-gray-600 focus:outline-none;
   }
   
@@ -28,10 +33,13 @@
   }
   
   .form-input {
-    @apply focus:ring-primary-500 focus:border-primary-500 focus:bg-white block w-full sm:text-sm border-slate-100 bg-slate-100 rounded-md
+    @apply focus:ring-primary-500 focus:border-primary-500 focus:bg-white block w-full border-transparent bg-dark/5 rounded-md
   }
 
   .card {
-    @apply bg-white px-4 py-5 border-b border-gray-200 sm:px-6
+    @apply bg-white border-gray-200 rounded-lg
+  }
+  .card-body {
+    @apply  px-4 py-5 sm:px-6
   }
 }

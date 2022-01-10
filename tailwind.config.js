@@ -15,11 +15,22 @@ module.exports = {
           600: '#4b5563',
           700: '#374151',
         },
-        light: '#f5f5f4',
+        'extra-light': '#f6f6f6',
+        light: '#f5f5f9',
+        dark: '#4338ca',
       },
       transitionProperty: {
         width: 'width',
         padding: 'padding',
+      },
+      dropShadow: {
+        card: '0px 6px 14px rgba(0, 0, 0, 0.06)',
+      },
+      fontSize: {
+        sm: ['14px', '20px'],
+        base: ['16px', '24px'],
+        lg: ['20px', '28px'],
+        xl: ['24px', '32px'],
       },
     },
     fontFamily: {

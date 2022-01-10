@@ -2,8 +2,8 @@ import { ChevronDoubleRightIcon, ChevronDoubleLeftIcon } from '@heroicons/react/
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 import { classNames } from '../../utils';
-import logo from '../../assets/images/sample-logo.svg';
-import logoMini from '../../assets/images/sample-logo-mini.svg';
+import logo from '../../assets/images/logo.svg';
+import logoMini from '../../assets/images/logo-mini.svg';
 import { handleMenuOpen } from '../../redux/layout';
 import navigation from '../../navigation';
 
@@ -39,7 +39,7 @@ export default function Sidebar() {
               to={item.navLink}
               className={classNames(
                 item.navLink === currentActiveLink ? 'bg-gray-100 text-gray-900' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
-                'group flex items-center px-2 py-2 text-sm font-medium rounded-md',
+                'group flex items-center px-2 py-2 font-medium rounded-md',
                 `${showFullWidth ? '' : 'justify-center'}`,
               )}
             >

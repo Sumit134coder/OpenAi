@@ -20,6 +20,9 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'react/jsx-props-no-spreading': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
+    'react/no-unstable-nested-components': 'off',
     'react/prop-types': 'off',
     'react/button-has-type': 'off',
     'no-param-reassign': 'off',

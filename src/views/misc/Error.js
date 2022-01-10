@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logoMini from '../../assets/images/sample-logo-mini.svg';
+import logoMini from '../../assets/images/logo-mini.svg';
 
 function Error() {
   return (
