@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap');
 
 @layer components {
   
   html {
-    @apply bg-light h-full
+    @apply bg-light-500 h-full
   }
 
   body {
@@ -18,27 +18,28 @@
   input::-ms-clear {
     display: none;
   }
-
+  
   .btn { 
     @apply inline-flex items-center px-4 py-2 border border-transparent text-base font-normal rounded-md 
     text-white bg-gray-500 hover:bg-gray-600 focus:outline-none;
   }
   
   .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700
+    @apply bg-primary-500 hover:bg-primary-600 disabled:opacity-50 disabled:bg-primary-500 disabled:cursor-not-allowed
   }
-  
+
   .btn-secondary {
-    @apply bg-secondary-600 hover:bg-secondary-700
+    @apply bg-secondary-500 hover:bg-secondary-600 disabled:opacity-50 disabled:bg-secondary-500 disabled:cursor-not-allowed
   }
   
   .form-input {
-    @apply focus:ring-primary-500 focus:border-primary-500 focus:bg-white block w-full border-transparent bg-dark/5 rounded-md
+    @apply focus:ring-primary-500 focus:border-primary-500 focus:bg-white block w-full border-zinc-300 rounded-md
   }
 
   .card {
     @apply bg-white border-gray-200 rounded-lg
   }
+
   .card-body {
     @apply  px-4 py-5 sm:px-6
   }

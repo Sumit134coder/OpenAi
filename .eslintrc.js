@@ -23,6 +23,8 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
     'react/no-unstable-nested-components': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
+    'no-underscore-dangle': 'off',
     'react/prop-types': 'off',
     'react/button-has-type': 'off',
     'no-param-reassign': 'off',

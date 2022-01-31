@@ -1,26 +1,26 @@
 import {
-  HomeIcon,
-  CogIcon,
-  DocumentIcon,
-} from '@heroicons/react/outline';
+  HiOutlineHome,
+  HiOutlineCog,
+  HiOutlineDocumentText,
+} from 'react-icons/hi';
 
 export default [
   {
     id: 'dashboard',
     title: 'Dashboard',
-    icon: HomeIcon,
+    icon: HiOutlineHome,
     navLink: '/dashboard',
   },
   {
     id: 'second-page',
     title: 'Second Page',
-    icon: DocumentIcon,
+    icon: HiOutlineDocumentText,
     navLink: '/second-page',
   },
   {
     id: 'settings',
     title: 'Settings',
-    icon: CogIcon,
+    icon: HiOutlineCog,
     navLink: '/settings',
   },
 ];

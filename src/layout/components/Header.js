@@ -1,10 +1,10 @@
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import {
-  BellIcon,
-  MenuAlt2Icon,
-} from '@heroicons/react/outline';
-import { SearchIcon } from '@heroicons/react/solid';
+  HiOutlineBell,
+  HiOutlineMenuAlt2,
+  HiSearch,
+} from 'react-icons/hi';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { classNames } from '../../utils';
@@ -34,13 +34,13 @@ export default function Header() {
         onClick={() => dispatch(handleSidebarOpen(true))}
       >
         <span className="sr-only">Open sidebar</span>
-        <MenuAlt2Icon className="h-6 w-6" aria-hidden="true" />
+        <HiOutlineMenuAlt2 className="h-6 w-6" aria-hidden="true" />
       </button>
       <div className="flex-1 px-4 flex justify-between items-center">
         <div className="flex-1 flex" />
         <div className="relative rounded-md">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <SearchIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+            <HiSearch className="h-5 w-5 text-gray-400" aria-hidden="true" />
           </div>
           <input
             type="text"
@@ -54,7 +54,7 @@ export default function Header() {
             className="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
             <span className="sr-only">View notifications</span>
-            <BellIcon className="h-6 w-6" aria-hidden="true" />
+            <HiOutlineBell className="h-6 w-6" aria-hidden="true" />
           </button>
 
           {/* Profile dropdown */}

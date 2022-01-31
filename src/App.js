@@ -1,8 +1,13 @@
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Router from './router/Router';
 
 function App() {
   return (
-    <Router />
+    <>
+      <Router />
+      <ToastContainer hideProgressBar icon={false} />
+    </>
   );
 }
 

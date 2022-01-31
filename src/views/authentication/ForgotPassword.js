@@ -1,5 +1,4 @@
-import { MailIcon } from '@heroicons/react/solid';
-import { ArrowNarrowLeftIcon } from '@heroicons/react/outline';
+import { HiMail, HiOutlineArrowNarrowLeft } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 
 function ForgotPassword() {
@@ -21,7 +20,7 @@ function ForgotPassword() {
           <div className="my-10">
             <div className="relative rounded-md">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <MailIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                <HiMail className="h-5 w-5 text-gray-400" aria-hidden="true" />
               </div>
               <input
                 type="email"
@@ -33,7 +32,7 @@ function ForgotPassword() {
           </div>
           <Link to="/login">
             <div className="text-center text-sm justify-center items-center flex">
-              <ArrowNarrowLeftIcon className="h-5 w-5 mr-2" />
+              <HiOutlineArrowNarrowLeft className="h-5 w-5 mr-2" />
               <span>Back to Sign In</span>
             </div>
           </Link>

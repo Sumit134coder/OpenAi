@@ -1,4 +1,4 @@
-import { ChevronDoubleRightIcon, ChevronDoubleLeftIcon } from '@heroicons/react/outline';
+import { HiChevronDoubleRight, HiChevronDoubleLeft } from 'react-icons/hi';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 import { classNames } from '../../utils';
@@ -20,8 +20,8 @@ export default function Sidebar() {
       {(menuHovering || menuOpen) && !sidebarOpen ? (
         <div className="w-5 text-gray-600 absolute right-0 mt-1 mr-2">
           {menuOpen
-            ? <ChevronDoubleLeftIcon className="cursor-pointer" onClick={() => dispatch(handleMenuOpen(false))} />
-            : <ChevronDoubleRightIcon className="cursor-pointer" onClick={() => dispatch(handleMenuOpen(true))} />}
+            ? <HiChevronDoubleLeft className="cursor-pointer" onClick={() => dispatch(handleMenuOpen(false))} />
+            : <HiChevronDoubleRight className="cursor-pointer" onClick={() => dispatch(handleMenuOpen(true))} />}
         </div>
       ) : null}
       <div className="flex items-center flex-shrink-0 px-4">

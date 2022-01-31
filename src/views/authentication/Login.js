@@ -1,6 +1,6 @@
 import {
-  UserIcon, LockClosedIcon, EyeIcon, EyeOffIcon,
-} from '@heroicons/react/solid';
+  HiUser, HiLockClosed, HiEye, HiEyeOff,
+} from 'react-icons/hi';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -33,7 +33,7 @@ function Login() {
           <div className="my-10">
             <div className="relative rounded-md">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <UserIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                <HiUser className="h-5 w-5 text-gray-400" aria-hidden="true" />
               </div>
               <input
                 type="text"
@@ -43,7 +43,7 @@ function Login() {
             </div>
             <div className="my-4 relative rounded-md">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <LockClosedIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                <HiLockClosed className="h-5 w-5 text-gray-400" aria-hidden="true" />
               </div>
               <input
                 type={showPassword ? 'text' : 'password'}
@@ -52,8 +52,8 @@ function Login() {
               />
               <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
                 {showPassword
-                  ? <EyeOffIcon className="h-5 w-5 text-gray-400 cursor-pointer" aria-hidden="true" onClick={() => setShowPassword(false)} />
-                  : <EyeIcon className="h-5 w-5 text-gray-400 cursor-pointer" aria-hidden="true" onClick={() => setShowPassword(true)} />}
+                  ? <HiEyeOff className="h-5 w-5 text-gray-400 cursor-pointer" aria-hidden="true" onClick={() => setShowPassword(false)} />
+                  : <HiEye className="h-5 w-5 text-gray-400 cursor-pointer" aria-hidden="true" onClick={() => setShowPassword(true)} />}
               </div>
             </div>
             <button onClick={handleLogin} className="btn btn-primary w-full justify-center py-3">Sign In</button>

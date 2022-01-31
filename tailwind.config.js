@@ -6,28 +6,36 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          500: '#6366f1',
-          600: '#4f46e5',
-          700: '#4338ca',
+          400: '#a78bfa', // light (input focus borders)
+          500: '#8b5cf6', // normal
+          600: '#7c3aed', // dark
         },
         secondary: {
+          400: '#9ca3af',
           500: '#6b7280',
           600: '#4b5563',
-          700: '#374151',
         },
-        'extra-light': '#f6f6f6',
-        light: '#f5f5f9',
-        dark: '#4338ca',
+        danger: {
+          500: '#ef4444',
+        },
+        light: {
+          400: '#f3f4f6', // hover color of items
+          500: '#f8f8f8', // all pages background
+        },
+        error: {
+          500: '#ef4444',
+        },
+      },
+      dropShadow: {
+        card: '0px 6px 14px rgba(0, 0, 0, 0.06)',
+        tab: '8px 4px 9px rgba(163, 171, 185, 0.24)',
       },
       transitionProperty: {
         width: 'width',
         padding: 'padding',
       },
-      dropShadow: {
-        card: '0px 6px 14px rgba(0, 0, 0, 0.06)',
-      },
       fontSize: {
-        sm: ['14px', '20px'],
+        sm: ['12.8px', '20px'],
         base: ['16px', '24px'],
         lg: ['20px', '28px'],
         xl: ['24px', '32px'],

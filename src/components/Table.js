@@ -1,5 +1,6 @@
-import { usePagination, useTable } from 'react-table';
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/outline';
+import { useGlobalFilter, usePagination, useTable } from 'react-table';
+import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
+import { useEffect } from 'react';
 
 function ShowPaginationButton({
   pageIndex, index, pageCount, gotoPage,
@@ -50,7 +51,7 @@ function ShowPaginationButton({
 }
 
 function Table({
-  columns, data, pageSize, className,
+  columns, data, pageSize, className, filter,
 }) {
   const {
     getTableProps,
@@ -65,8 +66,11 @@ function Table({
     gotoPage,
     nextPage,
     previousPage,
+    setGlobalFilter,
     state: { pageIndex },
-  } = useTable({ columns, data, initialState: { pageSize } }, usePagination);
+  } = useTable({ columns, data, initialState: { pageSize } }, useGlobalFilter, usePagination);
+
+  useEffect(() => setGlobalFilter(filter), [filter]);
 
   return (
     <>
@@ -79,7 +83,7 @@ function Table({
                   <th
                     {...column.getHeaderProps()}
                     scope="col"
-                    className="px-6 py-5 text-left text-sm font-medium tracking-wider text-gray-700"
+                    className="px-6 py-5 text-left text-sm font-medium tracking-wider"
                   >
                     {column.render('Header')}
                   </th>
@@ -91,9 +95,9 @@ function Table({
             {page.map((row) => {
               prepareRow(row);
               return (
-                <tr {...row.getRowProps()} className="hover:bg-extra-light">
+                <tr {...row.getRowProps()} className="hover:bg-light-400">
                   {row.cells.map((cell) => (
-                    <td {...cell.getCellProps()} className="px-6 py-5 whitespace-nowrap text-sm text-gray-500">{cell.render('Cell')}</td>
+                    <td {...cell.getCellProps()} className="px-6 py-5 whitespace-nowrap text-sm">{cell.render('Cell')}</td>
                   ))}
                 </tr>
               );
@@ -103,7 +107,7 @@ function Table({
       </div>
       <div className="flex flex-row-reverse md:flex-row items-center md:justify-between mt-4">
         <div className={`${className} hidden md:block px-4 py-3 text-sm text-gray-500`}>
-          {`Showing : ${pageSize} Items out of ${pageSize * pageCount} Result(s)`}
+          {`Showing : ${pageCount === 1 ? data.length : pageSize} Items out of ${pageCount === 1 ? data.length : pageSize * pageCount} Result(s)`}
         </div>
         <nav className={`${className} relative z-0 inline-flex -space-x-px`}>
           <button
@@ -112,7 +116,7 @@ function Table({
             className={`relative inline-flex items-center px-2 py-2 rounded-l-md font-medium ${canPreviousPage ? 'text-gray-500' : 'text-gray-300'} hover:bg-gray-50`}
           >
             <span className="sr-only">Previous</span>
-            <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
+            <HiChevronLeft className="h-5 w-5" aria-hidden="true" />
           </button>
           {pageOptions.map((index) => (
             <ShowPaginationButton
@@ -129,7 +133,7 @@ function Table({
             className={`relative inline-flex items-center px-2 py-2 rounded-r-md font-medium ${canNextPage ? 'text-gray-500' : 'text-gray-300'} hover:bg-gray-50`}
           >
             <span className="sr-only">Next</span>
-            <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
+            <HiChevronRight className="h-5 w-5" aria-hidden="true" />
           </button>
         </nav>
       </div>

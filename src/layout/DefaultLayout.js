@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { XIcon } from '@heroicons/react/outline';
+import { HiX } from 'react-icons/hi';
 import { useDispatch, useSelector } from 'react-redux';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
@@ -51,7 +51,7 @@ function DefaultLayout({ children }) {
                     onClick={() => dispatch(handleSidebarOpen(false))}
                   >
                     <span className="sr-only">Close sidebar</span>
-                    <XIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                    <HiX className="h-6 w-6 text-white" aria-hidden="true" />
                   </button>
                 </div>
               </Transition.Child>
