@@ -1,9 +1,20 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function ExerciseCard({ exercise = {} }) {
+  const navigate = useNavigate();
+
   return (
-    <div className="card rounded-lg p-4" key={exercise.id}>
+    <div
+      className="card rounded-lg p-4"
+      key={exercise.id}
+      onClick={() => {
+        navigate(`/fitness/Details?id=${exercise.id}`);
+      }}
+    >
       <img src={exercise.gifUrl} alt="gif" />
       <div className="flex flex-col gap-3">
         <h5 className="uppercase font-bold">{exercise.name}</h5>

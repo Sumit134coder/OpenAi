@@ -10,6 +10,11 @@ const Routes = [
     public: true,
   },
   {
+    path: '/fitness/Details',
+    component: lazy(() => import('../../views/Fitness/Details')),
+    public: true,
+  },
+  {
     path: '/home',
     component: lazy(() => import('../../views/Home')),
     layout: 'BlankLayout',
