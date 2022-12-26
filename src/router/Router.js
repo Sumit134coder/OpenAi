@@ -3,7 +3,8 @@ import {
 } from 'react-router-dom';
 import { Suspense } from 'react';
 import { DefaultRoute, Routes } from './routes';
-import DefaultLayout from '../layout/DefaultLayout';
+// import DefaultLayout from '../layout/DefaultLayout';
+import FitnessLayout from '../layout/FitnessLayout';
 import Error from '../views/misc/Error';
 import { isUserLoggedIn } from '../utils';
 
@@ -12,11 +13,11 @@ function FinalRoute({ route }) {
   return route.layout === 'BlankLayout'
     ? <route.component />
     : (
-      <DefaultLayout>
+      <FitnessLayout>
         <Suspense fallback={null}>
           <route.component />
         </Suspense>
-      </DefaultLayout>
+      </FitnessLayout>
     );
 }
 

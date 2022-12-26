@@ -5,6 +5,11 @@ const DefaultRoute = '/home';
 // By default all routes except /login require authentication unless property public = true
 const Routes = [
   {
+    path: '/fitness/home',
+    component: lazy(() => import('../../views/Fitness/Home')),
+    public: true,
+  },
+  {
     path: '/home',
     component: lazy(() => import('../../views/Home')),
     layout: 'BlankLayout',
