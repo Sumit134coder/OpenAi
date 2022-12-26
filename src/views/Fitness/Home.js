@@ -1,10 +1,11 @@
 import React from 'react';
-import { Landing } from './sections';
+import { Landing, Explore } from './sections';
 
 function Home() {
   return (
     <div>
       <Landing />
+      <Explore />
     </div>
   );
 }

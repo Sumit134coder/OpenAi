@@ -6,9 +6,9 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          400: '#a78bfa', // light (input focus borders)
-          500: '#8b5cf6', // normal
-          600: '#7c3aed', // dark
+          400: '#46454a', // light (input focus borders)
+          500: '#201f21', // normal
+          600: '#0c0c0d', // dark
         },
         secondary: {
           400: '#9ca3af',
