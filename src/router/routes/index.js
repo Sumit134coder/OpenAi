@@ -1,9 +1,15 @@
 import { lazy } from 'react';
 
-const DefaultRoute = '/dashboard';
+const DefaultRoute = '/home';
 
 // By default all routes except /login require authentication unless property public = true
 const Routes = [
+  {
+    path: '/home',
+    component: lazy(() => import('../../views/Home')),
+    layout: 'BlankLayout',
+    public: true,
+  },
   {
     path: '/dashboard',
     component: lazy(() => import('../../views/Dashboard')),
