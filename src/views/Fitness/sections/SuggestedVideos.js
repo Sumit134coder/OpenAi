@@ -10,7 +10,7 @@ function SuggestedVideos({ targetMuscleExercises, equipmentExercises }) {
       {/* ---video container----- */}
       <div className="flex gap-4 overflow-x-scroll no-bar snap-x">
         {
-          targetMuscleExercises.slice(0, 3).map((item) => (
+          targetMuscleExercises && targetMuscleExercises.slice(0, 3).map((item) => (
             <ExerciseCard exercise={item} className="snap-start h-auto" />
           ))
     }
@@ -20,7 +20,7 @@ function SuggestedVideos({ targetMuscleExercises, equipmentExercises }) {
       {/* ---video container----- */}
       <div className="flex gap-4 overflow-x-scroll no-bar snap-x">
         {
-          equipmentExercises.slice(0, 4).map((item) => (
+          equipmentExercises && equipmentExercises.slice(0, 4).map((item) => (
             <ExerciseCard exercise={item} className="snap-start" />
           ))
     }
