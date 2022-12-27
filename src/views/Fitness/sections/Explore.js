@@ -38,11 +38,11 @@ function Explore() {
   return (
     <div className="my-8 flex flex-col gap-4">
       {/* --heaing-- */}
-      <div className="text-center text-[3rem] font-bold">Explore workout excersises</div>
+      <div className="text-center text-[3rem] font-bold">Explore workout exercises</div>
 
       {/* ---search options---- */}
       <div className="flex items-center md:px-[3rem] px-4 gap-4">
-        <input type="search" placeholder="search" className="flex-1 form-input" onChange={(e) => setSearch(e.target.value)} />
+        <input type="search" placeholder="Search..." className="flex-1 form-input" onChange={(e) => setSearch(e.target.value)} />
         <button type="submit" className="btn btn-primary font-bold px-4" onClick={() => handleSearch()}>Search</button>
       </div>
 

@@ -1,6 +1,6 @@
 import { lazy } from 'react';
 
-const DefaultRoute = '/home';
+const DefaultRoute = '/fitness/home';
 
 // By default all routes except /login require authentication unless property public = true
 const Routes = [

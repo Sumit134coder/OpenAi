@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
-import { useParams, useSearchParams } from 'react-router-dom';
+import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
+import { AiOutlineLeft } from 'react-icons/ai';
 import { ExerciseDetails, SuggestedVideos, SimilarVideos } from './sections';
 import { exerciseOptions, fetchData, youtubeOptions } from '../../services';
 
 function Details() {
   const [queryParams] = useSearchParams();
+  const navigate = useNavigate();
 
   const id = queryParams.get('id');
 
@@ -40,6 +42,13 @@ function Details() {
 
   return (
     <div className="flex flex-col gap-3">
+      {/* ---header-- */}
+      <div className="flex items-center gap-2 text-[2rem] font-bold">
+        <button onClick={() => navigate('/fitness/home')} className="card p-3 font-extrabold ">
+          <AiOutlineLeft />
+        </button>
+        <h5>Details</h5>
+      </div>
       {/* ---Details--- */}
       <ExerciseDetails exercise={exercise} />
       {/* ----excerise Videos----- */}

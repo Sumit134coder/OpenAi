@@ -32,7 +32,7 @@ export default function Header() {
     <div className="sticky top-0 z-10 flex-shrink-0 flex items-center justify-between px-4 h-16 bg-white ">
       {/* ---icon---- */}
       <div className="flex items-center gap-2 ">
-        <img src={Logo} alt="logo" className="h-12" />
+        <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzY2xlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="logo" className="h-12 object-cover rounded-full w-12" />
         <span className="logo text-xl">GymBro</span>
       </div>
     </div>
