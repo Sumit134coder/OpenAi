@@ -17,11 +17,11 @@ function BodyParts({ bodyParts = [], setExercises }) {
   };
 
   return (
-    <div className="overflow-x-scroll scroll-snap flex gap-3 items-center justify-center no-bar">
+    <div className="overflow-x-scroll snap-x flex gap-3 items-center justify-center no-bar">
       {
       bodyParts && bodyParts.map((bodyPart) => (
         <button
-          className={`snap-start min-w-[7rem] text-center shadow p-3 rounded-lg font-bold bg-white hover:bg-primary-500 hover:text-white transition ease-in-out ${bodyPart === selectedPart && 'bg-primary-500 text-white'}`}
+          className={`snap-start min-w-[7rem] text-center shadow p-3 rounded-lg font-bold bg-white hover:bg-primary-500 hover:text-white transition ease-in-out ${bodyPart === selectedPart && 'bg-primary-500 text-white'} whitespace-nowrap`}
           onClick={() => {
             setSelectedPart(bodyPart);
             handleSearchbyPart(bodyPart);

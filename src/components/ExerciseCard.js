@@ -4,12 +4,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function ExerciseCard({ exercise = {} }) {
+function ExerciseCard({ exercise = {}, className = '' }) {
   const navigate = useNavigate();
 
   return (
     <div
-      className="card rounded-lg p-4"
+      className={`card rounded-lg p-4 ${className} `}
       key={exercise.id}
       onClick={() => {
         navigate(`/fitness/Details?id=${exercise.id}`);
@@ -19,7 +19,7 @@ function ExerciseCard({ exercise = {} }) {
       <div className="flex flex-col gap-3">
         <h5 className="uppercase font-bold">{exercise.name}</h5>
         {/* ---targets */}
-        <div className="flex items-center gap-3 uppercase">
+        <div className="flex items-center gap-3 uppercase flex-wrap">
           <span className="btn btn-primary text-xs rounded-full p-2 px-3">{exercise.bodyPart}</span>
           <span className="btn btn-primary text-xs rounded-full p-2 px-3">{exercise.target}</span>
         </div>

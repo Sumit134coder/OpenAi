@@ -45,10 +45,10 @@ function Details() {
       {/* ----excerise Videos----- */}
       <SimilarVideos exerciseVideos={exerciseVideos} name={exercise.name} />
       {/* suggested */}
-      {/* <SuggestedVideos
+      <SuggestedVideos
         targetMuscleExercises={targetMuscleExercises}
         equipmentExercises={equipmentExercises}
-      /> */}
+      />
     </div>
   );
 }
